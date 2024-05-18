@@ -44,10 +44,8 @@ jobs:
     - name: Commit changes
       run: git commit -m 'Updated site'
 
-    - name: Set Git remote URL
-      run: git remote set-url origin https://github.com/dynuchu/blog.git
+    - name: Create and checkout gh-pages branch
+      run: git checkout -b gh-pages
 
-    - name: Push changes to gh-pages branch
-      run: git push --force --set-upstream origin gh-pages
-      env:
-        GH_PAT: ${{ secrets.GH_PAT }}
+    - name: Set upstream branch
+      run: git push --set-upstream origin gh-pages
