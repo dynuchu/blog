@@ -34,7 +34,7 @@ jobs:
       run: git init
 
     - name: Update Git remote URL
-      run: git remote set-url origin https://github.com/dynuchu/dynuchublog.git
+      run: git remote set-url origin https://github.com/dynuchu/blog.git
 
     - name: Set Git user
       run: |
